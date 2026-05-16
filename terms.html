@@ -4,33 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Expense Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #6200ee; }
-        h2 { color: #3700b3; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        :root {
+            --primary: #B388FF;
+            --secondary: #00D084;
+            --bg-deep: #050505;
+            --surface: #0D0D0D;
+            --text: #FBFBFB;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 8px;
+            background: linear-gradient(to bottom right, #fff, rgba(255,255,255,0.5));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: rgba(251, 251, 251, 0.7);
+            margin-bottom: 0;
+        }
+
+        .footer {
+            margin-top: 80px;
+            text-align: center;
+            padding-bottom: 80px;
+            color: rgba(251, 251, 251, 0.3);
+        }
     </style>
 </head>
 <body>
-    <h1>Terms of Service</h1>
-    <p>Last updated: May 11, 2026</p>
-    <p>By using Expense Hub, you agree to the following terms and conditions.</p>
-    
-    <h2>1. Use of the App</h2>
-    <p>Expense Hub is provided "as is" for personal financial tracking. You are responsible for maintaining the security of your device and your Google account.</p>
-    
-    <h2>2. Data Accuracy</h2>
-    <p>While our AI strives for accuracy in capturing and categorizing transactions, you should always verify the data before making financial decisions.</p>
-    
-    <h2>3. Privacy</h2>
-    <p>Your use of the app is also governed by our Privacy Policy, which explains our data practices.</p>
-    
-    <h2>4. Limitations of Liability</h2>
-    <p>Expense Hub shall not be liable for any financial losses or data loss resulting from the use of the application.</p>
-    
-    <h2>5. Changes to Terms</h2>
-    <p>We reserve the right to update these terms at any time. Continued use of the app constitutes acceptance of the new terms.</p>
-    
-    <h2>6. Contact</h2>
-    <p>For support or legal inquiries, please email support.expensehub@gmail.com.</p>
+    <nav class="navbar">
+        <a href="index.html" class="back-link">← Back</a>
+        <div style="font-weight: 900;">EXPENSE HUB</div>
+    </nav>
+
+    <div class="container">
+        <div class="last-updated">Effective May 2026</div>
+        <h1>Terms of Service</h1>
+
+        <div class="section">
+            <h2>1. Acceptance</h2>
+            <p>By using Expense Hub, you agree to these terms. If you do not agree, please discontinue use immediately.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. User Responsibility</h2>
+            <p>Expense Hub provides AI-driven insights. You are responsible for verifying financial data before making any decisions.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Service Availability</h2>
+            <p>We strive for 99.9% uptime, but services are provided "as is" without warranty of any kind.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Termination</h2>
+            <p>We reserve the right to suspend accounts that violate our community guidelines or security protocols.</p>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 Expense Hub. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
+
