@@ -3,287 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Expense Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Expense Hub - Smart AI Finance Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: hsl(230, 20%, 96%);
-            --surface-color: hsl(0, 0%, 100%);
-            --primary-color: hsl(250, 60%, 50%);
-            --primary-light: hsl(250, 60%, 95%);
-            --text-main: hsl(230, 20%, 20%);
-            --text-muted: hsl(230, 15%, 40%);
-            --border-color: hsl(230, 20%, 90%);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: hsl(230, 20%, 10%);
-                --surface-color: hsl(230, 20%, 15%);
-                --primary-color: hsl(250, 70%, 65%);
-                --primary-light: hsl(250, 50%, 20%);
-                --text-main: hsl(0, 0%, 95%);
-                --text-muted: hsl(230, 15%, 70%);
-                --border-color: hsl(230, 20%, 20%);
-            }
+            --primary: #10B981; /* Emerald Green */
+            --bg-deep: #0F0C29; /* Deep Space */
+            --bg-mid: #302b63;
+            --bg-light: #24243e;
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            background: linear-gradient(135deg, var(--bg-deep), var(--bg-mid), var(--bg-light));
+            color: var(--text);
             margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 600px;
+            width: 90%;
             padding: 40px;
-            background: var(--surface-color);
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 40px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo-container {
+            width: 100px;
+            height: 100px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 50px;
+            color: white;
         }
 
         h1 {
             font-size: 2.5rem;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            background: linear-gradient(135deg, var(--primary-color), hsl(280, 60%, 50%));
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #a5b4fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .subtitle {
-            color: var(--text-muted);
+        .tagline {
             font-size: 1.1rem;
-        }
-
-        /* Quick Actions for Play Console Bot */
-        .quick-actions {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 32px;
-        }
-
-        .btn-action {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary-light);
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid var(--primary-color);
-            transition: all 0.2s;
-        }
-
-        .btn-action:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .section {
-            margin-bottom: 30px;
-            padding: 24px;
-            background: var(--bg-color);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s, box-shadow 0.2s;
-            scroll-margin-top: 40px;
-        }
-
-        .section:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-        .section-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: var(--primary-light);
-            color: var(--primary-color);
-            border-radius: 50%;
-            font-weight: 700;
-            margin-right: 16px;
-            font-size: 0.9rem;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        p {
-            margin: 0 0 16px 0;
-            color: var(--text-muted);
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight {
-            background: var(--primary-light);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.6);
+            margin: 12px 0 40px;
             font-weight: 500;
         }
 
-        .contact-box {
-            background: var(--primary-color);
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 18px 32px;
+            border-radius: 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            padding: 24px;
-            border-radius: 16px;
-            margin-top: 40px;
+            border: 1px solid var(--glass-border);
         }
 
-        .contact-box h2 {
-            color: white;
-            margin-bottom: 16px;
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
         }
 
-        .contact-box p {
-            color: rgba(255,255,255,0.9);
+        .footer {
+            margin-top: 48px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
         }
 
-        .contact-box strong {
-            display: block;
-            margin-top: 8px;
-            font-size: 1.1rem;
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-                padding: 24px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
+        .footer p { margin: 4px 0; }
+
+        /* Icon Font Placeholder (Using Emoji for zero dependencies) */
+        .emoji { vertical-align: middle; margin-right: 8px; }
+
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="header">
-            <h1>Privacy Policy</h1>
-            <div class="subtitle">Last Updated: May 2026</div>
+        <div class="logo-container">
+            <span class="logo-icon">💰</span>
         </div>
 
-        <div class="quick-actions">
-            <a href="#data-deletion" class="btn-action">Request Data Deletion</a>
-            <a href="#grievance" class="btn-action">Contact Grievance Officer</a>
+        <h1>Expense Hub</h1>
+        <p class="tagline">Smart AI Finance Manager</p>
+
+        <div class="links-container">
+            <a href="privacy.html" class="btn btn-primary">
+                View Privacy Policy
+            </a>
+            <a href="terms.html" class="btn btn-secondary">
+                Terms of Service
+            </a>
         </div>
 
-        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">
-            Expense Hub is built using privacy-by-design principles and is intended to align with major global privacy frameworks including <span class="highlight">GDPR, DPDP (India), and CCPA (California)</span>.
-        </p>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">1</div>
-                <h2>Notification Access Permission</h2>
-            </div>
-            <p>Expense Hub uses the Notification Access permission exclusively to identify financial transaction notifications for automatic expense tracking. Non-financial notifications, personal conversations, OTPs, emails, and private messages are ignored and not stored. The app is designed to process only transaction-related notifications from recognized financial institutions and is not intended to process personal messages or non-financial communications.</p>
-            <p><strong>User Control:</strong> Users can disable Notification Access or cloud synchronization at any time through device or app settings.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">2</div>
-                <h2>Privacy-First Processing</h2>
-            </div>
-            <p>To ensure maximum privacy and data security, we utilize a multi-layered approach to data refinement:</p>
-            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); margin-top: 10px;">
-                <li style="margin-bottom: 10px;"><strong>Secure Local Processing:</strong> The vast majority of transaction data is processed entirely on your device. The system is not designed to access or store private message contents.</li>
-                <li style="margin-bottom: 10px;"><strong>Local Intelligence:</strong> The app utilizes local behavioral patterns to refine categorization over time. This learning occurs exclusively within your device's secure environment.</li>
-                <li style="margin-bottom: 10px;"><strong>AI-Assisted Categorization:</strong> In limited scenarios of high ambiguity (such as unrecognized merchant codes), secure cloud-based AI services may be utilized to ensure data accuracy. This occurs only after local masking of sensitive personal identifiers.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">3</div>
-                <h2>Data Minimization & Cloud Sync</h2>
-            </div>
-            <p>In alignment with "Privacy by Design" principles, only "Sanitized Transaction Data" (Amount, Payee, Category, Date) is synchronized to the cloud if you enable sync. Raw notification text is never uploaded or stored outside your device.</p>
-        </div>
-
-        <div id="data-deletion" class="section">
-            <div class="section-header">
-                <div class="section-number">4</div>
-                <h2>Right to be Forgotten (Data Deletion)</h2>
-            </div>
-            <p>You have the right to request a complete and irreversible purge of your data from our cloud servers and your local device. Deletion timelines may vary by region to comply with mandatory local security and audit laws.</p>
-            <p><strong>To request account or data deletion:</strong> Use the "Delete Account" option within the Profile settings of the Expense Hub app, or contact us at the email address provided below.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">5</div>
-                <h2>Right to Correction</h2>
-            </div>
-            <p>We provide all users with the <strong>"Right to Correction"</strong>. You can manually override any automated category or brand detection at any time, helping ensure your financial records remain accurate and user-controlled.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">6</div>
-                <h2>Data Portability</h2>
-            </div>
-            <p>You have the right to request a copy of your transaction data in a structured, machine-readable format. Our Export feature (CSV, Excel) allows you to take your data with you at any time.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">7</div>
-                <h2>Third-Party Service Providers</h2>
-            </div>
-            <p>Expense Hub utilizes a limited number of trusted third-party service providers for essential functions:</p>
-            <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); margin-top: 10px;">
-                <li style="margin-bottom: 10px;"><strong>Cloud Infrastructure:</strong> Used for secure user authentication, real-time data synchronization, and encrypted cloud storage for receipt backups. All data is encrypted using industry-standard protocols (TLS 1.3 in transit, AES-256 at rest).</li>
-                <li style="margin-bottom: 10px;"><strong>Intelligent Processing:</strong> Secure AI services power our "Smart Insights" and scanning features. Data is handled in accordance with industry-standard security and privacy practices.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <div class="section-header">
-                <div class="section-number">8</div>
-                <h2>Age Restrictions</h2>
-            </div>
-            <p>Expense Hub is intended for users aged 18 and above. We do not knowingly collect data from minors.</p>
-        </div>
-
-        <div id="grievance" class="contact-box">
-            <h2>9. Grievance Redressal & Contact</h2>
-            <p>For concerns regarding data privacy or to exercise your rights under regional standards, please contact our Grievance Officer:</p>
-            <strong>Designation: Grievance Officer</strong>
-            <strong><a href="mailto:support.expensehub@gmail.com" style="color: white; text-decoration: underline;">support.expensehub@gmail.com</a></strong>
+        <div class="footer">
+            <p>Made with ❤️ for smart savers</p>
+            <p>Support: <a href="mailto:support.expensehub@gmail.com">support.expensehub@gmail.com</a></p>
+            <p style="margin-top: 20px; font-size: 0.75rem;">© 2026 Expense Hub. All rights reserved.</p>
         </div>
     </div>
+
 </body>
 </html>
