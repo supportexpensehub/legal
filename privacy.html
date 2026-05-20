@@ -167,23 +167,69 @@
         </header>
 
         <div class="section">
-            <h2>Notification Access</h2>
-            <p>We use Notification Access exclusively to identify <span class="highlight">financial transactions</span> for automatic tracking. Personal messages, OTPs, and emails are strictly ignored and never stored.</p>
-        </div>
-
-        <div class="section">
-            <h2>Data Processing</h2>
-            <p>Processing happens in a multi-layered secure environment:</p>
+            <h2>Definitions</h2>
             <ul>
-                <li><strong>On-Device:</strong> 95% of analysis occurs locally using our proprietary engine.</li>
-                <li><strong>Privacy Guard:</strong> Any cloud processing is performed after masking personal identifiers.</li>
-                <li><strong>Zero Sale:</strong> We never sell your data to advertisers or third parties.</li>
+                <li><strong>Personal Data:</strong> Any information relating to an identified or identifiable natural person, as defined under applicable global data protection laws.</li>
+                <li><strong>Sanitized Transaction Data:</strong> Cleaned, non-identifiable financial parameters (amount, payee name, category, and timestamp) with sensitive personal identifiers stripped.</li>
+                <li><strong>Local Processing:</strong> Data extraction, parsing, and categorization performed entirely within the secure sandbox of your physical mobile device.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Data Retention</h2>
-            <p>You have the <strong>Right to be Forgotten</strong>. Use the "Delete Account" option in settings to irreversibly purge your data from our systems.</p>
+            <h2>Prominent Disclosure &amp; Notification Access</h2>
+            <p>Expense Hub requests <span class="highlight">Notification Access</span> permission solely to parse financial transaction alerts from authorized banking and financial applications.</p>
+            <ul>
+                <li><strong>Strict Data Filtering:</strong> The application is technically engineered to ignore all personal communications, chat messages, verification codes (OTPs), emails, and non-financial notifications. No raw notification texts are permanently logged or uploaded.</li>
+                <li><strong>Full User Control:</strong> Notification Access is entirely optional. Users can enable, disable, or adjust these permissions at any time through their device settings.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Privacy-First Data Processing</h2>
+            <p>To protect your sensitive financial records, we utilize a highly secure environment:</p>
+            <ul>
+                <li><strong>Secure Local Processing:</strong> The core transaction parsing and categorization engine runs entirely locally on your device. The system is not designed to access or store private message contents.</li>
+                <li><strong>Cloud Syncing &amp; Backup:</strong> If you explicitly enable cloud synchronization, only Sanitized Transaction Data is encrypted and securely backed up to our cloud databases.</li>
+                <li><strong>AI-Assisted Classification:</strong> In rare cases of high ambiguity (such as an unrecognized merchant or payee), secure cloud-based AI services may be utilized to ensure data accuracy. This occurs only after removing all personal identifiers on-device.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Legal Bases for Processing (EEA Users)</h2>
+            <p>For users residing in the European Economic Area (EEA), we process your data under the following GDPR legal bases:</p>
+            <ul>
+                <li><strong>Consent:</strong> For optional features like cloud account syncing and remote backups, which can be toggled off at any time.</li>
+                <li><strong>Contractual Necessity:</strong> For local notification processing required to compile your budget insights and track spending as requested.</li>
+                <li><strong>Legitimate Interests:</strong> For analyzing fully anonymized, aggregated usage trends to optimize app stability and categorization logic.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Global Commitments &amp; CCPA</h2>
+            <ul>
+                <li><strong>No Sale or Sharing of Data:</strong> Expense Hub does not sell, rent, license, or share your Personal Data with third-party advertisers, brokers, or data syndicates for marketing or cross-context behavioral advertising.</li>
+                <li><strong>Local Storage Usage:</strong> We do not deploy traditional tracking cookies. We utilize secure on-device local storage (SharedPreferences) solely to preserve your application configurations and local database records.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Your Rights &amp; Data Portability</h2>
+            <p>We respect your privacy rights and provide the following controls:</p>
+            <ul>
+                <li><strong>Right to be Forgotten:</strong> You have the right to request a complete and permanent erasure of your data. Using the "Delete Account" option in the settings will irreversibly purge all records from both your local device and our secure cloud systems.</li>
+                <li><strong>Right to Correction:</strong> You can manually edit or correct any automatically categorized transaction, payee name, or amount at any time, ensuring you retain total control over your records.</li>
+                <li><strong>Data Portability:</strong> You can export a copy of your transaction history in structured CSV or Excel formats at any time using our built-in export features.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Security &amp; Infrastructure</h2>
+            <p>We utilize industry-leading cloud infrastructure providers for encrypted authentication and real-time database synchronization. All cloud transmissions are secured using TLS 1.3, and data is stored at rest using AES-256 encryption.</p>
+        </div>
+
+        <div class="section">
+            <h2>Age Restrictions</h2>
+            <p>Expense Hub is intended for users aged 18 and above. We do not knowingly solicit or collect personal information from individuals under the age of 18.</p>
         </div>
 
         <div class="contact-box">
