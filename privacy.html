@@ -179,7 +179,7 @@
             <h2>Prominent Disclosure &amp; Notification Access</h2>
             <p>Expense Hub requests <span class="highlight">Notification Access</span> permission solely to parse financial transaction alerts from authorized banking and financial applications.</p>
             <ul>
-                <li><strong>Strict Data Filtering:</strong> The application is technically engineered to ignore all personal communications, chat messages, verification codes (OTPs), emails, and non-financial notifications. No raw notification texts are permanently logged or uploaded.</li>
+                <li><strong>Strict Data Filtering:</strong> Expense Hub is designed to process only transaction-related notifications from recognized financial institutions and is not intended to process personal communications, emails, OTPs, or other non-financial notifications. No raw notification texts are permanently logged or uploaded.</li>
                 <li><strong>Full User Control:</strong> Notification Access is entirely optional. Users can enable, disable, or adjust these permissions at any time through their device settings.</li>
             </ul>
         </div>
@@ -188,9 +188,9 @@
             <h2>Privacy-First Data Processing</h2>
             <p>To protect your sensitive financial records, we utilize a highly secure environment:</p>
             <ul>
-                <li><strong>Secure Local Processing:</strong> The core transaction parsing and categorization engine runs entirely locally on your device. The system is not designed to access or store private message contents.</li>
+                <li><strong>Secure Local Processing:</strong> To protect your sensitive financial records, the core transaction parsing and categorization engine runs entirely locally on your device.</li>
                 <li><strong>Cloud Syncing &amp; Backup:</strong> If you explicitly enable cloud synchronization, only Sanitized Transaction Data is encrypted and securely backed up to our cloud databases.</li>
-                <li><strong>AI-Assisted Classification:</strong> In rare cases of high ambiguity (such as an unrecognized merchant or payee), secure cloud-based AI services may be utilized to ensure data accuracy. This occurs only after removing all personal identifiers on-device.</li>
+                <li><strong>AI-Assisted Classification:</strong> In rare cases where a merchant code or payee name is highly ambiguous, the app may use secure, privacy-guarded AI classification models to resolve the category. This is only done after removing all personal context on-device.</li>
                 <li><strong>Camera Access:</strong> Used exclusively to scan and import receipts. Captured images are processed temporarily to populate transaction details and are immediately deleted. Receipt photos are never uploaded or stored on our servers.</li>
             </ul>
         </div>
@@ -225,13 +225,16 @@
         </div>
 
         <div class="section">
-            <h2>Security &amp; Infrastructure</h2>
-            <p>We utilize industry-leading cloud infrastructure providers for encrypted authentication and real-time database synchronization. All cloud transmissions are secured using TLS 1.3, and data is stored at rest using AES-256 encryption.</p>
+            <h2>Third-Party Services</h2>
+            <ul>
+                <li><strong>Cloud Services:</strong> We utilize industry-leading cloud infrastructure providers for encrypted authentication and real-time database synchronization. All cloud transmissions are secured using TLS 1.3, and data is protected using industry-standard encryption during transmission and at rest.</li>
+                <li><strong>Third-Party Providers:</strong> Expense Hub may utilize trusted third-party providers for authentication, cloud synchronization, analytics, crash reporting, AI-assisted categorization, and receipt processing. These providers process data only to the extent necessary to provide their services and are contractually obligated to maintain appropriate security measures.</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>Data Retention</h2>
-            <p>We retain your transaction and personal data only for as long as your account is active to provide you with financial insights. Upon account deletion, all records are immediately and permanently erased from your local device. Remote cloud data is permanently and irreversibly purged, except where local regulatory compliance or statutory auditing laws require temporary retention (for example, in India and the Middle East, transaction records are retained in a secure, deactivated status for 180 days to comply with regulatory auditing requirements before being permanently deleted).</p>
+            <p>We retain your transaction and personal data only for as long as your account is active to provide you with financial insights. Upon account deletion, all records are immediately and permanently erased from your local device. Remote cloud data is permanently and irreversibly purged, except that certain data may be retained for a limited period where required by applicable law or regulatory obligations.</p>
         </div>
 
         <div class="section">
