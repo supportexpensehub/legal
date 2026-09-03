@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Hub - Legal Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>Legal Information - SpendScape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7E57C2; /* App Primary Purple */
-            --secondary: #00D084; /* Premium Emerald */
-            --bg: #FFFFFF;
-            --text: #1A1A1A;
-            --text-muted: #6B7280;
-            --surface: #F9FAFB;
-            --border: #E5E7EB;
+            --primary: #315C49;
+            --primary-soft: #D8ECD8;
+            --gold: #B28B4A;
+            --purple: #7E57C2;
+            --bg: #F6F7FB;
+            --surface: #FFFDFA;
+            --text: #1E211E;
+            --text-muted: #7D8178;
+            --border: #D9D4C9;
+            --shadow: 0 20px 50px rgba(30, 33, 30, 0.08);
+            --shadow-soft: 0 10px 30px rgba(30, 33, 30, 0.06);
         }
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #5E9E7A;
+                --primary-soft: #1A2E22;
+                --gold: #D4A86A;
+                --purple: #9B72CB;
+                --bg: #0D0D0B;
+                --surface: #161614;
+                --text: #E8E4DC;
+                --text-muted: #8A8E84;
+                --border: #2A2A26;
+                --shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+                --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+            }
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
             color: var(--text);
             margin: 0;
             min-height: 100vh;
@@ -26,17 +50,18 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 480px;
+            max-width: 520px;
             width: 90%;
-            padding: 48px;
-            background: var(--bg);
-            border-radius: 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            padding: 48px 40px;
+            background: var(--surface);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            animation: fadeIn 0.8s ease-out;
+            animation: fadeIn 0.6s ease-out;
         }
 
         @keyframes fadeIn {
@@ -47,13 +72,13 @@
         .logo-container {
             width: 88px;
             height: 88px;
-            background: var(--surface);
+            background: var(--primary-soft);
             border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 32px;
-            box-shadow: 0 10px 20px rgba(126, 87, 194, 0.1);
+            margin: 0 auto 28px;
+            box-shadow: var(--shadow-soft);
             overflow: hidden;
             border: 1px solid var(--border);
         }
@@ -64,18 +89,20 @@
             object-fit: cover;
         }
 
-        h1 {
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
             font-size: 2.5rem;
-            font-weight: 900;
+            letter-spacing: -0.5px;
             margin: 0;
-            letter-spacing: -1.5px;
-            color: var(--text);
+            color: var(--primary);
         }
 
         .tagline {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--text-muted);
-            margin: 8px 0 40px;
+            margin: 6px 0 36px;
             font-weight: 500;
             letter-spacing: 0.5px;
         }
@@ -88,63 +115,67 @@
 
         .btn {
             padding: 18px 32px;
-            border-radius: 20px;
+            border-radius: 16px;
             font-weight: 700;
             font-size: 1rem;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
         }
 
         .btn-primary {
             background: var(--primary);
             color: #ffffff;
-            box-shadow: 0 10px 25px rgba(126, 87, 194, 0.3);
+            box-shadow: var(--shadow-soft);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(126, 87, 194, 0.4);
-            background: #6A49AD;
+            box-shadow: var(--shadow);
+            filter: brightness(1.05);
         }
 
         .btn-secondary {
-            background: var(--surface);
+            background: var(--bg);
             color: var(--text);
             border: 1px solid var(--border);
         }
 
         .btn-secondary:hover {
-            background: #f3f4f6;
+            background: var(--primary-soft);
             transform: translateY(-2px);
         }
 
         .footer {
-            margin-top: 56px;
-            font-size: 0.85rem;
+            margin-top: 44px;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .footer a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
         }
 
+        .footer a:hover { border-bottom-color: var(--primary); }
     </style>
 </head>
 <body>
 
     <div class="container">
         <div class="logo-container">
-            <img src="app_icon.jpg" alt="Expense Hub Logo" class="logo-icon">
+            <img src="app_icon.jpg" alt="SpendScape Logo" class="logo-icon">
         </div>
 
-        <h1>Expense Hub</h1>
-        <p class="tagline">Legal & Compliance Hub</p>
+        <h1 class="brand">SpendScape</h1>
+        <p class="tagline">Legal &amp; Compliance Hub</p>
 
         <div class="links-container">
             <a href="privacy.html" class="btn btn-primary">
@@ -157,8 +188,8 @@
 
         <div class="footer">
             <p>Made for smart savers</p>
-            <p>Support: <a href="mailto:support.expensehub@gmail.com">support.expensehub@gmail.com</a></p>
-            <p style="margin-top: 24px;">© 2026 Expense Hub. All rights reserved.</p>
+            <p>Support: <a href="mailto:apphelpdesk.support@gmail.com">apphelpdesk.support@gmail.com</a></p>
+            <p style="margin-top: 20px;">&copy; 2026 SpendScape. All rights reserved.</p>
         </div>
     </div>
 

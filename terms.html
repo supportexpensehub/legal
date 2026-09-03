@@ -3,35 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Expense Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>Terms of Service - SpendScape</title>
+    <meta name="description" content="SpendScape Terms of Service. Last updated September 2026. By using SpendScape you agree to the following terms and conditions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7E57C2;
-            --secondary: #00D084;
-            --bg: #FFFFFF;
-            --surface: #F9FAFB;
-            --text: #1A1A1A;
-            --text-muted: #6B7280;
-            --border: #E5E7EB;
+            --primary: #315C49;
+            --primary-soft: #D8ECD8;
+            --gold: #B28B4A;
+            --purple: #7E57C2;
+            --bg: #F6F7FB;
+            --surface: #FFFDFA;
+            --text: #1E211E;
+            --text-muted: #7D8178;
+            --border: #D9D4C9;
+            --shadow-soft: 0 10px 30px rgba(30, 33, 30, 0.06);
         }
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #5E9E7A;
+                --primary-soft: #1A2E22;
+                --gold: #D4A86A;
+                --purple: #9B72CB;
+                --bg: #0D0D0B;
+                --surface: #161614;
+                --text: #E8E4DC;
+                --text-muted: #8A8E84;
+                --border: #2A2A26;
+                --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+            }
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
         }
 
         .navbar {
-            padding: 24px;
+            padding: 20px 28px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid var(--border);
-            background: #fff;
+            background: var(--surface);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -41,124 +64,310 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.2s ease;
+        }
+
+        .back-link:hover { opacity: 0.75; }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+            font-size: 1.1rem;
         }
 
         .container {
             max-width: 800px;
-            margin: 24px auto;
+            margin: 32px auto 64px;
             padding: 0 20px;
         }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 8px;
-            color: var(--text);
+        .header {
+            margin-bottom: 28px;
+            text-align: center;
         }
 
         .last-updated {
             color: var(--primary);
             font-weight: 700;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
             display: block;
         }
 
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 800;
+            font-size: 2.7rem;
+            margin: 0 0 14px 0;
+            letter-spacing: -0.5px;
+            color: var(--text);
+        }
+
+        .intro {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
         .section {
-            background: #fff;
-            padding: 24px;
-            border-radius: 16px;
+            background: var(--surface);
+            padding: 26px 28px;
+            border-radius: 18px;
             border: 1px solid var(--border);
-            margin-bottom: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.01);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 16px;
         }
 
         h2 {
-            font-size: 1.5rem;
-            color: var(--text);
-            margin-bottom: 16px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0 0 12px 0;
+            color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
         }
 
         h2::before {
             content: '';
             width: 4px;
-            height: 24px;
-            background: var(--primary);
+            height: 22px;
+            background: var(--gold);
             border-radius: 4px;
+            flex-shrink: 0;
         }
 
         p {
+            margin: 0 0 14px 0;
             color: var(--text-muted);
-            margin-bottom: 0;
         }
 
-        .footer {
-            margin-top: 80px;
-            text-align: center;
-            padding-bottom: 80px;
+        .section p:last-child { margin-bottom: 0; }
+
+        ul {
+            padding-left: 20px;
+            margin: 8px 0 0 0;
+        }
+
+        li {
+            margin-bottom: 10px;
             color: var(--text-muted);
+        }
+
+        li strong {
+            color: var(--text);
+        }
+
+        .note {
+            border-left: 4px solid var(--primary);
+            background: var(--primary-soft);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0 0;
+        }
+
+        .note p { color: var(--text); margin: 0; }
+
+        .contact-box {
+            background: var(--surface);
+            padding: 30px 32px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-soft);
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-box h2::before { display: none; }
+
+        .contact-box p {
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 16px;
+        }
+
+        .contact-box .email {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-box .email:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        footer.page-footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 8px 20px 0;
+        }
+
+        footer.page-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 20px auto 48px; }
+            h1 { font-size: 2.1rem; }
+            .section { padding: 22px 20px; }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="back-link">← Back</a>
-        <div style="font-weight: 900; color: var(--primary)">EXPENSE HUB</div>
+        <a href="index.html" class="back-link">&larr; Legal Hub</a>
+        <div class="brand">SpendScape</div>
     </nav>
 
     <div class="container">
-        <span class="last-updated">Effective May 2026</span>
-        <h1>Terms of Service</h1>
+        <header class="header">
+            <span class="last-updated">Last Updated: September 2026</span>
+            <h1>Terms of Service</h1>
+            <p class="intro">By using SpendScape, you agree to the following Terms of Service. Please read them carefully before using the application.</p>
+        </header>
 
         <div class="section">
-            <h2>1. Use of Service</h2>
-            <p>Expense Hub is provided "as is" for personal financial management. You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account.</p>
+            <h2>1. Use of the Service</h2>
+            <p>SpendScape is a personal finance management application designed to help users record, organize, monitor and understand their income, expenses, budgets and other financial information.</p>
+            <p>The Service is provided for personal informational and financial management purposes only.</p>
+            <p>SpendScape does not provide financial, investment, accounting, tax, legal or other professional advice. You are responsible for how you use the information, calculations, insights and projections provided by the Service.</p>
+            <p>You agree to use SpendScape lawfully and responsibly.</p>
         </div>
 
         <div class="section">
-            <h2>2. Notification Access & Transaction Processing</h2>
-            <p style="margin-bottom: 12px;"><strong>Purpose & Permission:</strong> By enabling Notification Access, you consent to Expense Hub processing transaction-related notifications for automatic expense tracking, budgeting, and financial insights.</p>
-            <p style="margin-bottom: 12px;"><strong>Platform Limitation:</strong> Automatic transaction tracking via Notification Access is supported only on Android devices in selected countries. This feature is completely unavailable on iOS devices globally, where transactions must be tracked manually.</p>
-            <p style="margin-bottom: 12px; font-weight: 600; color: var(--primary);">Scope of Processing: Expense Hub is designed to process only transaction-related notifications from recognized financial institutions and is not intended to process personal communications, emails, OTPs, or other non-financial notifications.</p>
-            <p style="margin-bottom: 12px;"><strong>Local Extraction:</strong> The parsing and extraction of notifications happen entirely on-device. Raw notification texts are processed transiently and are not permanently logged, stored, or transmitted to any server. Only sanitized, non-identifiable transaction parameters (such as amount, merchant, category, and date) are saved in your local database or securely synced to your cloud account (if enabled).</p>
-            <p><strong>Opt-Out:</strong> You retain full control and can enable or disable Notification Access at any time through your device settings.</p>
+            <h2>2. Transactions &amp; User-Provided Information</h2>
+            <p>SpendScape allows you to add and manage financial information through features provided within the application.</p>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Ensuring that the information you enter is accurate.</li>
+                <li>Reviewing transaction details before saving them.</li>
+                <li>Correcting inaccurate or incomplete information.</li>
+                <li>Maintaining the security of your account and access credentials.</li>
+                <li>Using the Service only for legitimate personal or authorized purposes.</li>
+            </ul>
+            <p>Some features may assist you in entering or interpreting information provided by you. These features are intended to improve convenience and may occasionally produce inaccurate or incomplete results.</p>
+            <p>You should always review and confirm information before relying on it for financial decisions.</p>
+            <p>SpendScape does not guarantee that automatically processed, extracted or assisted information will always be accurate.</p>
         </div>
 
         <div class="section">
-            <h2>3. Accuracy of Data</h2>
-            <p>While we strive for high accuracy in transaction extraction, we do not guarantee that all data will be perfectly captured. Expense Hub provides informational tools to assist with personal financial management. Users remain responsible for reviewing and verifying transaction data, budgets, reports, and financial records before relying on them for financial, tax, legal, or business purposes.</p>
+            <h2>3. Calculations, Projections &amp; Insights</h2>
+            <p>SpendScape may provide calculations, estimates, projections and other financial information for informational purposes. These results are based on the information provided by the user and should be independently verified before being used for financial decisions.</p>
         </div>
 
         <div class="section">
-            <h2>4. Limitation of Liability</h2>
-            <p>Expense Hub and its developers shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the service.</p>
+            <h2>4. Notifications &amp; Reminders</h2>
+            <p>SpendScape may provide notifications, reminders, summaries and other alerts relating to your activity within the application.</p>
+            <p>These may include reminders to record transactions, daily summaries, budget updates, spending information or other useful information.</p>
+            <p>Notification timing may depend on your selected preferences and device settings.</p>
+            <p>You can manage available notification preferences through the application and/or your device settings.</p>
+            <p>SpendScape does not guarantee that every notification will be delivered at a particular time, as delivery may depend on device, operating-system and other technical conditions outside our control.</p>
         </div>
 
         <div class="section">
-            <h2>5. User Conduct</h2>
-            <p>You agree not to use the app for any unlawful purpose or in any way that could damage or disable the service.</p>
+            <h2>5. SpendScape Pro &amp; Subscriptions</h2>
+            <p>Certain features of SpendScape may require an active SpendScape Pro subscription or other eligible purchase.</p>
+            <p>Subscription plans, pricing, features and availability may change from time to time.</p>
+            <p>Subscriptions are purchased through the applicable app marketplace and are subject to the marketplace's applicable payment, renewal and cancellation terms.</p>
+            <p>Where automatic renewal applies, your subscription may renew unless cancelled before the applicable renewal date.</p>
+            <p>You may manage or cancel your subscription through the relevant app marketplace.</p>
+            <p>Refunds are handled according to the applicable marketplace's refund policies and procedures.</p>
         </div>
 
         <div class="section">
-            <h2>6. Termination</h2>
-            <p>We may suspend or terminate access to the Service if you violate these Terms, misuse the Service, engage in unlawful activity, or where necessary to protect the security, integrity, or operation of the Service.</p>
+            <h2>6. Data Ownership &amp; Account Management</h2>
+            <p>You retain ownership of the personal financial information that you provide to SpendScape.</p>
+            <p>SpendScape does not claim ownership of your personal financial records simply because you use the Service.</p>
+            <p>The SpendScape application, including its design, branding, software, visual elements, features, content and other original materials, remains the property of SpendScape and/or its applicable rights holders and is protected by applicable intellectual property laws.</p>
+            <p>You may not copy, reproduce, modify, distribute, reverse engineer, resell or commercially exploit the Service or its proprietary components without appropriate authorization.</p>
         </div>
 
         <div class="section">
-            <h2>7. No Financial Advice</h2>
-            <p>Expense Hub provides budgeting, expense tracking, categorization, forecasting, and analytical tools for informational purposes only. The Service does not provide financial, investment, accounting, tax, or legal advice. Users should consult qualified professionals before making financial decisions.</p>
+            <h2>7. Account Deletion &amp; Termination</h2>
+            <p>You may stop using SpendScape at any time.</p>
+            <p>Where an account deletion feature is provided, you may request deletion of your account through the applicable in-app process.</p>
+            <p>Uninstalling the application does not necessarily constitute deletion of an account or information associated with that account.</p>
+            <p>SpendScape may suspend or terminate access to the Service where reasonably necessary, including in cases involving:</p>
+            <ul>
+                <li>Violation of these Terms</li>
+                <li>Misuse of the Service</li>
+                <li>Fraudulent or unlawful activity</li>
+                <li>Security concerns</li>
+                <li>Abuse of the Service or its features</li>
+            </ul>
+            <p>Where applicable, information associated with deleted accounts will be handled according to the SpendScape Privacy Policy and applicable law.</p>
         </div>
 
-        <footer class="footer">
-            <p>© 2026 Expense Hub. All rights reserved.</p>
+        <div class="section">
+            <h2>8. Service Availability &amp; Changes</h2>
+            <p>We aim to keep SpendScape reliable and available, but we do not guarantee that the Service will always be uninterrupted, error-free or available at all times.</p>
+            <p>The Service may occasionally be unavailable because of maintenance, updates, technical issues, security measures or circumstances beyond our reasonable control.</p>
+            <p>SpendScape may add, modify, suspend or discontinue features from time to time.</p>
+            <p>We may also update these Terms when necessary. Continued use of the Service after an updated version becomes effective constitutes acceptance of the revised Terms, where permitted by applicable law.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Accuracy of Information &amp; No Financial Advice</h2>
+            <p>SpendScape is a financial organization and tracking tool, not a financial advisor.</p>
+            <p>Information displayed by the application may be incomplete, delayed, incorrectly entered or otherwise inaccurate.</p>
+            <p>You should independently verify important information before making financial, investment, tax, accounting or other decisions.</p>
+            <p>SpendScape is not responsible for decisions made solely on the basis of information, calculations, projections, recommendations or insights displayed by the Service.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Limitation of Liability</h2>
+            <p>SpendScape is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis to the fullest extent permitted by applicable law.</p>
+            <p>To the extent permitted by law, SpendScape and its developers shall not be responsible for indirect, incidental, special, consequential or similar damages arising from your use of, or inability to use, the Service.</p>
+            <p>Nothing in these Terms is intended to exclude or limit any liability that cannot legally be excluded or limited under applicable law.</p>
+        </div>
+
+        <div class="section">
+            <h2>11. Privacy</h2>
+            <p>Your privacy is important to us.</p>
+            <p>Our Privacy Policy explains what information may be collected, how it may be used, how it may be protected and the choices available to you.</p>
+            <p>By using SpendScape, you acknowledge that your information will be handled in accordance with the applicable Privacy Policy.</p>
+        </div>
+
+        <div class="section">
+            <h2>12. Contact</h2>
+            <p>If you have questions, concerns or requests regarding these Terms of Service, please contact us at:</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>SpendScape Support</h2>
+            <p>Please contact us with any questions, concerns or requests regarding these Terms of Service.</p>
+            <a class="email" href="mailto:apphelpdesk.support@gmail.com">apphelpdesk.support@gmail.com</a>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 SpendScape. All rights reserved. &middot; <a href="index.html">Back to Legal Hub</a></p>
         </footer>
     </div>
 </body>
 </html>
-
